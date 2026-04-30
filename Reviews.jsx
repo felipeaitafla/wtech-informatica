@@ -134,7 +134,6 @@ const Reviews = () => {
 
         {/* Heading — full width, centered, above the grid */}
         <header className="rv-heading">
-          <div className="wt-section__num">02 / Avaliações</div>
           <h2>O que nossos clientes dizem.</h2>
           <p>Avaliações reais de quem já confiou no nosso serviço.</p>
         </header>
