@@ -337,6 +337,7 @@ button { font-family: inherit; }
   .wt-hero h1 { font-size: 26px; }
   .wt-hero__media { aspect-ratio: 4 / 3; min-height: 0; max-width: 100%; }
   .wt-hero__grid-lines { display: none; }
+  .wt-hero__cta .wt-btn { flex: 1; }
 }
 
 /* ── Reviews (Google Slider) ─────────────────────────────────────── */
