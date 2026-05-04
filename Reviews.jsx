@@ -76,7 +76,6 @@ const Reviews = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
   const trackRef = React.useRef(null);
-  const clipRef  = React.useRef(null);
 
   React.useEffect(() => {
     const onResize = () => setWindowWidth(window.innerWidth);
@@ -100,7 +99,7 @@ const Reviews = () => {
     tryLoad();
   }, []);
 
-  const visibleCount = windowWidth <= 768 ? 1 : windowWidth <= 1024 ? 2 : 3;
+  const visibleCount = windowWidth <= 900 ? 1 : 3;
   const reviews     = (place?.reviews || []).filter(r => r.rating === 5).slice(0, 3);
   const maxIndex    = Math.max(0, reviews.length - visibleCount);
 
@@ -108,19 +107,13 @@ const Reviews = () => {
     setCurrentIndex(i => Math.min(i, maxIndex));
   }, [maxIndex]);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const track = trackRef.current;
-    const clip  = clipRef.current;
-    if (!track || !clip || !track.children.length) return;
+    if (!track || !track.children.length) return;
 
-    // Compute exact card width from the clip's real pixel width so all cards
-    // are guaranteed to be identical in size regardless of percentage rounding.
-    const clipW  = clip.getBoundingClientRect().width;
-    const cardW  = (clipW - (visibleCount - 1) * GAP) / visibleCount;
-    clip.style.setProperty('--rv-card-w', cardW + 'px');
-
-    const step       = cardW + GAP;
-    const safeIndex  = Math.min(currentIndex, maxIndex);
+    const cardW = track.children[0].getBoundingClientRect().width;
+    const step = cardW + GAP;
+    const safeIndex = Math.min(currentIndex, maxIndex);
     track.style.transform = `translateX(-${safeIndex * step}px)`;
   }, [currentIndex, windowWidth, reviews.length, maxIndex, visibleCount]);
 
@@ -159,12 +152,6 @@ const Reviews = () => {
             </div>
           </div>
 
-          {/*
-            rv-slider-outer: position context for arrows; padding:0 18px places each
-            arrow (36px wide) centered exactly on the clip boundary.
-            rv-clip: the only element with overflow:hidden.
-            --rv-card-w: set in JS from clipRef so all cards are pixel-perfect equal.
-          */}
           <div className="rv-slider-outer">
             <button
               className="rv-arrow rv-arrow--prev"
@@ -177,7 +164,7 @@ const Reviews = () => {
               </svg>
             </button>
 
-            <div className="rv-clip" ref={clipRef}>
+            <div className="rv-clip">
               <div className="rv-track" ref={trackRef}>
                 {reviews.map((r, i) => <ReviewCard key={i} review={r} />)}
               </div>
