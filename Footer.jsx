@@ -15,7 +15,7 @@ const Footer = () => (
         <a href="https://facebook.com/wtechinformatica01" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <Icon name="facebook" size={18} onDark />
         </a>
-        <a href="https://wa.me/5562993291737" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <a href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <Icon name="whatsapp" size={18} onDark />
         </a>
       </div>
@@ -27,7 +27,7 @@ const Footer = () => (
     </div>
 
     <div className="wt-footer__agency">
-      Site desenvolvido por JP Marketing Digital
+      <a href="https://www.jpmidiadigitaleimpressa.com.br/" target="_blank" rel="noopener noreferrer">Site desenvolvido por JP Marketing Digital</a>
     </div>
   </footer>
 );

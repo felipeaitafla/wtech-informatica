@@ -32,7 +32,7 @@ const Hero = () => {
       </div>
       <div className="wt-container wt-hero__inner">
         <div className="wt-hero__text">
-          <img src="assets/logo-blue.png" alt="W Tech Informática" className="wt-hero__logo" />
+          <img src="assets/logo-white.png" alt="W Tech Informática" className="wt-hero__logo" />
           <h1>
             Assistência Técnica em Goiânia especializada em Conserto, Manutenção, Reparo de Notebook e Computador (Desktop e MacBook).
           </h1>
@@ -42,7 +42,7 @@ const Hero = () => {
           </p>
           <div className="wt-hero__cta">
             <a
-              href="https://wa.me/5562993291737"
+              href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!"
               target="_blank"
               rel="noopener noreferrer"
               className="wt-btn wt-btn--primary"
@@ -51,7 +51,7 @@ const Hero = () => {
               Chamar no WhatsApp
             </a>
             <a
-             href="#servicos"
+             href="tel:+5562993291737"
              className="wt-btn wt-btn--secondary"
              >
               <Icon name="phone" size={18} />

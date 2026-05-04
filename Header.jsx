@@ -25,7 +25,7 @@ const Header = ({ activeSection = 'inicio', onNav }) => {
           ))}
         </nav>
         <a
-          href="https://wa.me/5562993291737"
+          href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!"
           target="_blank"
           rel="noopener noreferrer"
           className="wt-btn wt-btn--primary wt-btn--sm"

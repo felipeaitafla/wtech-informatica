@@ -45,7 +45,7 @@ const App = () => {
       <Footer />
       <a
         className="wt-fab"
-        href="https://wa.me/5562993291737"
+        href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chamar no WhatsApp"

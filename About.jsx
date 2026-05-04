@@ -13,7 +13,7 @@ const About = () => (
         </figure>
 
         <div className="wt-about__text">
-          <h2>Mais de 6 anos consertando computadores em Goiânia.</h2>
+          <h2>Mais de 6 anos consertando computadores em Goiânia e região.</h2>
           <p>
             A W Tech Informática nasceu da paixão por tecnologia e do incômodo de ver
             tanta gente jogando computador fora por problemas que tinham solução.

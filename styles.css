@@ -1361,6 +1361,12 @@ button { font-family: inherit; }
   color: rgba(253,253,255,0.28);
   letter-spacing: 0.03em;
 }
+.wt-footer__agency a:hover { color: rgba(253,253,255,0.6); }
+
+@media (max-width: 600px) {
+  .wt-footer__inner { padding-bottom: 32px; }
+  .wt-footer__bottom { flex-direction: column; align-items: center; gap: 8px; }
+}
 
 /* ── Floating WhatsApp ───────────────────────────────────────────── */
 .wt-fab {

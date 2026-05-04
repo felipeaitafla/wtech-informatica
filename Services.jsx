@@ -89,10 +89,10 @@ const Services = () => (
       <div className="wt-services__cta">
         <div className="wt-services__cta-text">
           <strong>Não encontrou seu problema na lista?</strong>
-          <span>Chame no WhatsApp e descreva o que está acontecendo. Respondemos em horário comercial.</span>
+          <span>Chame no WhatsApp e descreva o que está acontecendo. <br></br> Respondemos em horário comercial.</span>
         </div>
         <a
-          href="https://wa.me/5562993291737"
+          href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!"
           target="_blank"
           rel="noopener noreferrer"
           className="wt-btn wt-btn--primary"

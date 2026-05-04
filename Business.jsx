@@ -24,7 +24,7 @@ const Business = () => (
 
           <div className="wt-business__cta">
             <a
-              href="https://wa.me/5562993291737"
+              href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20suporte%20para%20empresas."
               target="_blank"
               rel="noopener noreferrer"
               className="wt-btn wt-btn--primary"

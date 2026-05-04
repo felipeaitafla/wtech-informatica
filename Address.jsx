@@ -22,7 +22,7 @@ const Address = () => (
                 <span>Jardim América, Goiânia — GO</span>
                 <span>CEP 74275-080</span>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=R.+C-139,+149+Jardim+America+Goiania"
+                  href="https://www.google.com/maps?cid=13618029844147851746&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=pt-BR&gl=BR&source=embed"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -49,7 +49,9 @@ const Address = () => (
             <div className="wt-address__row-flex">
               <div className="wt-address__row-label">WhatsApp / Telefone</div>
               <div className="wt-address__row-content">
-                <strong>(62) 99329-1737</strong>
+                <a href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!" target="_blank" rel="noopener noreferrer">
+                  <strong>(62) 99329-1737</strong>
+                </a>
                 <span>Atendimento em horário comercial</span>
               </div>
             </div>
@@ -61,7 +63,7 @@ const Address = () => (
               <div className="wt-address__row-label">Redes sociais</div>
               <div className="wt-address__row-content">
                 <strong>@wtech_informatica</strong>
-                <span>/wtechinformatica01</span>
+                <span>W Tech Informática</span>
               </div>
             </div>
           </div>
