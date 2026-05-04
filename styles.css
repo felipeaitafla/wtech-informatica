@@ -405,18 +405,26 @@ button { font-family: inherit; }
   of card content.
   rv-clip: overflow:hidden — this is the only element that clips the track.
 */
+.rv-summary-panel,
+.rv-slider-outer { min-width: 0; }
+
 .rv-slider-outer {
   position: relative;
   padding: 0 18px;
 }
 
-.rv-clip { overflow: hidden; }
+.rv-clip {
+  overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+}
 
 .rv-track {
   display: flex;
   gap: 16px;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+  min-width: 0;
 }
 
 .rv-card {
