@@ -48,7 +48,7 @@ const Hero = () => {
               className="wt-btn wt-btn--primary"
             >
               <Icon name="whatsapp" size={18} />
-              Chamar no WhatsApp
+              WhatsApp
             </a>
             <a
              href="tel:+5562993291737"
