@@ -1,18 +1,18 @@
 // Hero.jsx
 
 const HERO_IMAGES = [
-  'assets/portfolio/laptop-board-fan.jpg',
-  'assets/portfolio/pc-build-rtx.jpg',
-  'assets/portfolio/laptop-deep-clean.jpg',
-  'assets/portfolio/motherboard-thermal.jpg',
-  'assets/portfolio/all-in-one-repair.jpg',
-  'assets/portfolio/aorus-ryzen-build.jpg',
-  'assets/portfolio/dell-aio-board.jpg',
-  'assets/portfolio/dell-g5-laptop.jpg',
-  'assets/portfolio/hp-laptop-internals.jpg',
-  'assets/portfolio/laptop-repair-hp.jpg',
-  'assets/portfolio/laptop-screen-disassembly.jpg',
-  'assets/portfolio/macbook-windows.jpg',
+  'assets/portfolio/laptop-board-fan.webp',
+  'assets/portfolio/pc-build-rtx.webp',
+  'assets/portfolio/laptop-deep-clean.webp',
+  'assets/portfolio/motherboard-thermal.webp',
+  'assets/portfolio/all-in-one-repair.webp',
+  'assets/portfolio/aorus-ryzen-build.webp',
+  'assets/portfolio/dell-aio-board.webp',
+  'assets/portfolio/dell-g5-laptop.webp',
+  'assets/portfolio/hp-laptop-internals.webp',
+  'assets/portfolio/laptop-repair-hp.webp',
+  'assets/portfolio/laptop-screen-disassembly.webp',
+  'assets/portfolio/macbook-windows.webp',
 ];
 
 const Hero = () => {
@@ -34,11 +34,11 @@ const Hero = () => {
         <div className="wt-hero__text">
           <img src="assets/logo-blue.png" alt="W Tech Informática" className="wt-hero__logo" />
           <h1>
-            <em>Assistência Técnica em Goiânia</em> especializada em Conserto, Manutenção, Reparo de Notebook e Computador (Desktop e MacBook).
+            Assistência Técnica em Goiânia especializada em Conserto, Manutenção, Reparo de Notebook e Computador (Desktop e MacBook).
           </h1>
           <p className="wt-hero__body">
             Trabalhamos com todas marcas: Apple, Dell, Samsung, Lenovo, Asus, Acer, Positivo, Avell, HP, etc.
-            Nossa loja física está localizada no Jardim América, em Goiânia-GO, porém atendemos à Domicílio/Empresa.
+            <br></br>Nossa loja física está localizada no Jardim América, em Goiânia-GO, porém atendemos à Domicílio/Empresa.
           </p>
           <div className="wt-hero__cta">
             <a
@@ -50,7 +50,12 @@ const Hero = () => {
               <Icon name="whatsapp" size={18} />
               Chamar no WhatsApp
             </a>
-            <a href="#servicos" className="wt-btn wt-btn--secondary">Ver serviços</a>
+            <a
+             href="#servicos"
+             className="wt-btn wt-btn--secondary"
+             >
+              <Icon name="phone" size={18} />
+              Ligação</a>
           </div>
         </div>
 

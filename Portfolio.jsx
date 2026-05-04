@@ -1,16 +1,16 @@
 // Portfolio.jsx — auto-scrolling full-width carousel
 
 const PORTFOLIO_ITEMS = [
-  { src: 'assets/portfolio/pc-build-rtx.jpg',              alt: 'PC gamer RTX + AIO' },
-  { src: 'assets/portfolio/laptop-deep-clean.jpg',         alt: 'Limpeza interna Lenovo' },
-  { src: 'assets/portfolio/motherboard-thermal.jpg',       alt: 'Pasta térmica CPU' },
-  { src: 'assets/portfolio/laptop-screen-disassembly.jpg', alt: 'Troca de tela LCD' },
-  { src: 'assets/portfolio/all-in-one-repair.jpg',         alt: 'All-in-one diagnóstico' },
-  { src: 'assets/portfolio/laptop-board-fan.jpg',          alt: 'Cooler + placa notebook' },
-  { src: 'assets/portfolio/aorus-ryzen-build.jpg',         alt: 'AORUS Ryzen NVMe' },
-  { src: 'assets/portfolio/macbook-windows.jpg',           alt: 'MacBook diagnóstico' },
-  { src: 'assets/portfolio/dell-aio-board.jpg',            alt: 'Dell AIO placa-mãe' },
-  { src: 'assets/portfolio/hp-laptop-internals.jpg',       alt: 'HP interno completo' },
+  { src: 'assets/portfolio/pc-build-rtx.webp',              alt: 'PC gamer RTX + AIO' },
+  { src: 'assets/portfolio/laptop-deep-clean.webp',         alt: 'Limpeza interna Lenovo' },
+  { src: 'assets/portfolio/motherboard-thermal.webp',       alt: 'Pasta térmica CPU' },
+  { src: 'assets/portfolio/laptop-screen-disassembly.webp', alt: 'Troca de tela LCD' },
+  { src: 'assets/portfolio/all-in-one-repair.webp',         alt: 'All-in-one diagnóstico' },
+  { src: 'assets/portfolio/laptop-board-fan.webp',          alt: 'Cooler + placa notebook' },
+  { src: 'assets/portfolio/aorus-ryzen-build.webp',         alt: 'AORUS Ryzen NVMe' },
+  { src: 'assets/portfolio/macbook-windows.webp',           alt: 'MacBook diagnóstico' },
+  { src: 'assets/portfolio/dell-aio-board.webp',            alt: 'Dell AIO placa-mãe' },
+  { src: 'assets/portfolio/hp-laptop-internals.webp',       alt: 'HP interno completo' },
 ];
 
 const Portfolio = () => {
