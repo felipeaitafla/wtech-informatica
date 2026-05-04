@@ -5,7 +5,7 @@ const About = () => (
     <div className="wt-container">
       <div className="wt-about">
         <figure className="wt-about__media">
-          <img src="assets/portfolio/laptop-repair-hp.webp" alt="Bancada de reparo da W Tech Informática" />
+          <img src="assets/fachada-w-tech.webp" alt="Bancada de reparo da W Tech Informática" />
           <div className="wt-about__stat">
             <strong>+6</strong>
             <span>ANOS DE OFICINA</span>

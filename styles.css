@@ -580,6 +580,12 @@ button { font-family: inherit; }
 
 @media (max-width: 768px) {
   .rv-flex { grid-template-columns: 1fr; align-items: start; }
+  .wt-section.wt-reviews { overflow-x: hidden; }
+  .rv-heading { text-align: center; align-items: center; }
+  .rv-summary-panel { display: flex; flex-direction: column; align-items: center; margin-bottom: 24px; }
+  .rv-stars-row { justify-content: center; }
+  .rv-text { text-align: center; }
+  .rv-read-more { align-self: center; }
 }
 
 /* ── Testimonial Video ───────────────────────────────────────────── */

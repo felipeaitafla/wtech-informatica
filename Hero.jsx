@@ -17,16 +17,26 @@ const HERO_IMAGES = [
 
 const Hero = () => {
   const [current, setCurrent] = React.useState(0);
+  const sectionRef = React.useRef(null);
 
   React.useEffect(() => {
-    const id = setInterval(() => {
-      setCurrent(i => (i + 1) % HERO_IMAGES.length);
-    }, 2200);
-    return () => clearInterval(id);
+    const section = sectionRef.current;
+    let id = null;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        id = setInterval(() => setCurrent(i => (i + 1) % HERO_IMAGES.length), 2200);
+      } else {
+        clearInterval(id);
+      }
+    }, { threshold: 0.1 });
+
+    if (section) observer.observe(section);
+    return () => { clearInterval(id); observer.disconnect(); };
   }, []);
 
   return (
-    <section id="inicio" className="wt-hero" data-screen-label="Hero">
+    <section id="inicio" className="wt-hero" data-screen-label="Hero" ref={sectionRef}>
       <div className="wt-hero__grid-lines" aria-hidden="true">
         {Array.from({ length: 12 }).map((_, i) => <span key={i} />)}
       </div>
