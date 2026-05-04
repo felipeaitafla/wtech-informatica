@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade — W Tech Informática</title>
+  <meta name="description" content="Política de Privacidade e Cookies da W Tech Informática." />
+  <link rel="stylesheet" href="colors_and_type.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .pp-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(253,253,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--wt-paper-alt);
+    }
+    .pp-header__inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .pp-header__logo img { height: 40px; }
+    .pp-header__back {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--wt-mute);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 150ms;
+    }
+    .pp-header__back:hover { color: var(--wt-accent); }
+    .pp-header__back::before {
+      content: '←';
+      font-size: 16px;
+    }
+
+    .pp-hero {
+      background: var(--wt-accent);
+      padding: 64px 0 48px;
+    }
+    .pp-hero__inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+    .pp-hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: var(--fs-eyebrow);
+      letter-spacing: var(--tracking-eyebrow);
+      color: rgba(253,253,255,0.65);
+      margin-bottom: 16px;
+    }
+    .pp-hero h1 {
+      color: var(--wt-paper);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+    .pp-hero__date {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: rgba(253,253,255,0.55);
+    }
+
+    .pp-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px var(--gutter) 96px;
+    }
+
+    .pp-section { margin-bottom: 48px; }
+
+    .pp-section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--wt-ink);
+      letter-spacing: -0.01em;
+      margin: 0 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--wt-accent);
+      display: inline-block;
+    }
+
+    .pp-section p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--wt-ink-soft);
+      margin: 0 0 16px;
+      text-align: justify;
+    }
+    .pp-section p:last-child { margin-bottom: 0; }
+
+    .pp-section ul {
+      margin: 16px 0;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pp-section ul li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--wt-ink-soft);
+      padding-left: 20px;
+      position: relative;
+    }
+    .pp-section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--wt-accent);
+      font-weight: 700;
+    }
+
+    .pp-alert {
+      background: var(--wt-paper-alt);
+      border-left: 3px solid var(--wt-accent);
+      border-radius: 0 var(--r-md) var(--r-md) 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--wt-ink);
+      line-height: 1.6;
+    }
+
+    .pp-definitions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .pp-definition {
+      background: var(--wt-paper-alt);
+      border-radius: var(--r-lg);
+      padding: 20px 24px;
+    }
+    .pp-definition strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--wt-accent);
+      margin-bottom: 6px;
+      font-family: var(--font-mono);
+      letter-spacing: 0.02em;
+    }
+    .pp-definition p {
+      font-size: 15px;
+      margin: 0;
+      color: var(--wt-ink-soft);
+    }
+
+    .pp-contact {
+      background: var(--wt-ink);
+      border-radius: var(--r-lg);
+      padding: 32px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .pp-contact p {
+      color: rgba(253,253,255,0.75);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .pp-contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--wt-accent);
+      color: var(--wt-paper);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 24px;
+      border-radius: var(--r-md);
+      transition: filter 150ms;
+    }
+    .pp-contact a:hover { filter: brightness(1.1); }
+
+    .pp-footer {
+      background: var(--wt-ink);
+      color: var(--wt-paper);
+      padding: 48px 0 0;
+    }
+    .pp-footer__inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--gutter) 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .pp-footer__logo { height: 56px; filter: brightness(0) invert(1); }
+    .pp-footer__about {
+      font-size: 14px;
+      color: rgba(253,253,255,0.6);
+      max-width: 480px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .pp-footer__social { display: flex; gap: 12px; }
+    .pp-footer__social a {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(253,253,255,0.06);
+      color: var(--wt-paper);
+      font-size: 18px;
+      transition: background 150ms;
+      text-decoration: none;
+    }
+    .pp-footer__social a:hover { background: var(--wt-accent); }
+    .pp-footer__bottom {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 18px var(--gutter);
+      border-top: 1px solid rgba(253,253,255,0.12);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: rgba(253,253,255,0.5);
+      flex-wrap: wrap;
+    }
+    .pp-footer__bottom a {
+      color: rgba(253,253,255,0.5);
+      transition: color 150ms;
+    }
+    .pp-footer__bottom a:hover { color: rgba(253,253,255,0.85); }
+    .pp-footer__agency {
+      background: rgba(0,0,0,0.25);
+      text-align: center;
+      padding: 10px;
+      font-size: 11px;
+      color: rgba(253,253,255,0.28);
+      letter-spacing: 0.03em;
+    }
+    .pp-footer__agency a { color: inherit; transition: color 150ms; }
+    .pp-footer__agency a:hover { color: rgba(253,253,255,0.6); }
+
+    @media (max-width: 600px) {
+      .pp-hero { padding: 48px 0 36px; }
+      .pp-body { padding: 40px var(--gutter) 64px; }
+      .pp-footer__bottom { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="pp-header">
+    <div class="pp-header__inner">
+      <a href="/" class="pp-header__logo">
+        <img src="assets/logo-blue.png" alt="W Tech Informática" />
+      </a>
+      <a href="/" class="pp-header__back">Voltar ao site</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="pp-hero">
+    <div class="pp-hero__inner">
+      <p class="pp-hero__eyebrow">DOCUMENTO LEGAL</p>
+      <h1>Política de Privacidade<br>e Cookies</h1>
+      <p class="pp-hero__date">Válida a partir de Maio de 2026</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="pp-body">
+
+    <div class="pp-section">
+      <p>
+        <strong>49.725.538 WILLIAM DE MELO FILHO (W Tech Informática)</strong>, pessoa jurídica de direito privado,
+        CNPJ 49.725.538/0001-52, sob endereço R. C-139, 149 - Qd. 403, Lt. 06 - Jardim América,
+        Goiânia - GO, 74275-080, Brasil ("Empresa" ou "nós") leva a sua privacidade a sério e zela
+        pela segurança e proteção de dados de todos os seus clientes, parceiros, fornecedores e
+        usuários ("Usuários" ou "você") do site <a href="https://wtechgoiania.com.br/" style="color:var(--wt-accent)">https://wtechgoiania.com.br/</a> e qualquer outro
+        site, Loja, aplicativo operado pela Empresa (aqui designados, simplesmente, "Site").
+      </p>
+      <p>
+        Esta Política de Privacidade destina-se a informá-lo sobre o modo como nós utilizamos e
+        divulgamos informações coletadas em suas visitas ao nosso Site e em mensagens que trocamos
+        com você ("Comunicações").
+      </p>
+      <div class="pp-alert">
+        AO ACESSAR O SITE, ENVIAR COMUNICAÇÕES OU FORNECER QUALQUER TIPO DE DADO PESSOAL, VOCÊ
+        DECLARA ESTAR CIENTE E DE ACORDO COM ESTA POLÍTICA DE PRIVACIDADE, A QUAL DESCREVE AS
+        FINALIDADES E FORMAS DE TRATAMENTO DE SEUS DADOS PESSOAIS QUE VOCÊ DISPONIBILIZAR NO SITE.
+      </div>
+      <p>
+        Esta Política de Privacidade fornece uma visão geral de nossas práticas de privacidade e
+        das escolhas que você pode fazer, bem como direitos que você pode exercer em relação aos
+        Dados Pessoais tratados por nós. Se você tiver alguma dúvida sobre o uso de Dados Pessoais,
+        entre em contato com <a href="mailto:contato@wtechgoiania.com.br" style="color:var(--wt-accent)">contato@wtechgoiania.com.br</a>.
+      </p>
+      <p>
+        Além disso, a Política de Privacidade não se aplica a quaisquer aplicativos, produtos,
+        serviços, site ou recursos de mídia social de terceiros que possam ser oferecidos ou
+        acessados por meio do Site. Recomendamos que você revise a política de privacidade de
+        qualquer site com o qual você interaja antes de permitir a coleta e o uso de seus Dados Pessoais.
+      </p>
+      <p>
+        Caso você nos envie Dados Pessoais referentes a outras pessoas físicas, você declara ter a
+        competência para fazê-lo e declara ter obtido o consentimento necessário para autorizar o uso
+        de tais informações nos termos desta Política de Privacidade.
+      </p>
+    </div>
+
+    <div class="pp-section">
+      <h2>Definições</h2>
+      <div class="pp-definitions">
+        <div class="pp-definition">
+          <strong>Dados Pessoais</strong>
+          <p>Qualquer informação que, direta ou indiretamente, identifique ou possa identificar uma pessoa natural, como por exemplo, nome, CPF, data de nascimento, endereço IP, dentre outros.</p>
+        </div>
+        <div class="pp-definition">
+          <strong>Dados Pessoais Sensíveis</strong>
+          <p>Qualquer informação que revele, em relação a uma pessoa natural, origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico.</p>
+        </div>
+        <div class="pp-definition">
+          <strong>Tratamento de Dados Pessoais</strong>
+          <p>Qualquer operação efetuada no âmbito dos Dados Pessoais, por meio de meios automáticos ou não, tal como a recolha, gravação, organização, estruturação, armazenamento, adaptação ou alteração, recuperação, consulta, utilização, divulgação por transmissão, disseminação ou disponibilização, harmonização ou associação, restrição, eliminação ou destruição.</p>
+        </div>
+        <div class="pp-definition">
+          <strong>Leis de Proteção de Dados</strong>
+          <p>Todas as disposições legais que regulem o Tratamento de Dados Pessoais, incluindo, porém sem se limitar, a Lei nº 13.709/18, Lei Geral de Proteção de Dados Pessoais ("LGPD").</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pp-section">
+      <h2>Uso de Dados Pessoais</h2>
+      <p>Coletamos e usamos Dados Pessoais para gerenciar seu relacionamento conosco e melhor atendê-lo quando você estiver adquirindo produtos e/ou serviços no Site, personalizando e melhorando sua experiência. Exemplos de como usamos os dados incluem:</p>
+      <ul>
+        <li>Viabilizar que você adquira produtos e/ou serviços no Site;</li>
+        <li>Para confirmar ou corrigir as informações que temos sobre você;</li>
+        <li>Para enviar informações que acreditamos ser do seu interesse;</li>
+        <li>Para personalizar sua experiência de uso no Site;</li>
+        <li>Para personalizar o envio de publicidades para você, baseada em seu interesse em nosso Site;</li>
+        <li>Para entrarmos em contato por um número de telefone e/ou endereço de e-mail fornecido, por meio de mensagem de voz, equipamentos de discagem automática, SMS, e-mail, ou qualquer outro meio de comunicação, nos termos da lei e para fins comerciais razoáveis.</li>
+      </ul>
+      <div class="pp-alert">
+        NOSSO SITE NÃO SE DESTINA A PESSOAS COM MENOS DE 18 (DEZOITO) ANOS E PEDIMOS QUE TAIS PESSOAS NÃO NOS FORNEÇAM QUALQUER DADO PESSOAL.
+      </div>
+    </div>
+
+    <div class="pp-section">
+      <h2>Não fornecimento de Dados Pessoais</h2>
+      <p>Você não é obrigado a compartilhar os Dados Pessoais que solicitamos, no entanto, se você optar por não os compartilhar, em alguns casos, não poderemos fornecer a você acesso completo ao Site, alguns recursos especializados ou ser capaz de prestar a assistência necessária ou viabilizar a entrega do produto ou prestar o serviço contratado por você.</p>
+    </div>
+
+    <div class="pp-section">
+      <h2>Dados coletados</h2>
+      <p>O público em geral poderá navegar no Site sem necessidade de qualquer cadastro e envio de Dados Pessoais. No entanto, algumas das funcionalidades do Site poderão depender de cadastro e envio de Dados Pessoais.</p>
+      <p><strong>No contato ao Site, nós podemos coletar:</strong></p>
+      <ul>
+        <li>Dados de contato: nome, sobrenome, número de telefone, cidade, Estado e endereço de e-mail;</li>
+        <li>Informações que você envia via formulário (dúvidas, reclamações, sugestões, críticas, elogios etc.).</li>
+      </ul>
+      <p><strong>Na navegação geral no Site, nós poderemos coletar:</strong></p>
+      <ul>
+        <li>Dados de localização quando você acessa o Site;</li>
+        <li>Informações sobre suas preferências e interesses em relação aos produtos/serviços;</li>
+        <li>Dados de navegação no Site, incluindo conteúdo visualizado, informações sobre o navegador e dispositivo, endereço IP e localização;</li>
+        <li>Dados anônimos ou agregados sobre como o Site é usufruído;</li>
+        <li>Outras informações que não revelem especificamente a sua identidade, como dados de navegador e dispositivo, coletadas por meio de cookies, pixel tags e outras tecnologias.</li>
+      </ul>
+      <p>Ao menos que você informe em algum formulário livre preenchido por você, nós não coletamos Dados Pessoais Sensíveis.</p>
+    </div>
+
+    <div class="pp-section">
+      <h2>Compartilhamento de Dados Pessoais com terceiros</h2>
+      <p>Nós poderemos compartilhar seus Dados Pessoais:</p>
+      <ul>
+        <li>Com empresas parceiras e provedores de serviços para gerenciar ou suportar certos aspectos de nossas operações comerciais, incluindo hospedagem, armazenamento de dados, gerenciamento de fraudes, suporte ao cliente, marketing e serviços de TI;</li>
+        <li>Com terceiros, com o objetivo de nos ajudar a gerenciar o Site;</li>
+        <li>Com terceiros, caso ocorra qualquer reorganização, fusão, venda, joint venture, cessão, transmissão ou transferência de toda ou parte da nossa empresa.</li>
+      </ul>
+    </div>
+
+    <div class="pp-section">
+      <h2>Transferências internacionais de Dados</h2>
+      <p>Dados Pessoais e informações de outras naturezas coletadas por nós podem ser transferidos ou acessados por entidades pertencentes ao grupo corporativo das empresas parceiras em todo o mundo de acordo com esta Política de Privacidade.</p>
+    </div>
+
+    <div class="pp-section">
+      <h2>Forma de coleta automática de Dados Pessoais</h2>
+      <p>Quando você visita o Site, ele pode armazenar ou recuperar informações em seu navegador, seja na forma de cookies e de outras tecnologias semelhantes. Essas informações são usadas principalmente para que o Site funcione como você espera e geralmente não o identificam diretamente.</p>
+      <ul>
+        <li><strong>Por meio do navegador ou do dispositivo:</strong> tipo de computador, resolução da tela, nome e versão do sistema operacional, modelo e fabricante do dispositivo, idioma e versão do navegador.</li>
+        <li><strong>Uso de cookies:</strong> tipo de navegador, tempo dispendido no Site, páginas visitadas, preferências de idioma e outros dados de tráfego anônimos. Caso não deseje, você pode configurar os cookies no menu "opções" ou "preferências" do seu browser.</li>
+        <li><strong>Pixel tags e tecnologias similares:</strong> utilizados para rastrear ações de usuários, medir o sucesso de campanhas de marketing e coletar dados estatísticos sobre o uso do Site.</li>
+      </ul>
+    </div>
+
+    <div class="pp-section">
+      <h2>Direitos do Usuário</h2>
+      <p>Você pode, a qualquer momento, requerer:</p>
+      <ul>
+        <li>Confirmação de que seus Dados Pessoais estão sendo tratados;</li>
+        <li>Acesso aos seus Dados Pessoais;</li>
+        <li>Correções a dados incompletos, inexatos ou desatualizados;</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos;</li>
+        <li>Portabilidade de Dados Pessoais a outro prestador de serviços;</li>
+        <li>Eliminação de Dados Pessoais tratados com seu consentimento, na medida do permitido em lei;</li>
+        <li>Informações sobre as entidades às quais seus Dados Pessoais tenham sido compartilhados;</li>
+        <li>Revogação do consentimento.</li>
+      </ul>
+      <p>Seus pedidos serão tratados com especial cuidado. Poderá lhe ser pedido que faça prova da sua identidade de modo a assegurar que a partilha dos Dados Pessoais é apenas feita com o seu titular.</p>
+    </div>
+
+    <div class="pp-section">
+      <h2>Segurança dos Dados Pessoais</h2>
+      <p>Buscamos adotar as medidas técnicas e organizacionais previstas pelas Leis de Proteção de Dados adequadas para proteção dos Dados Pessoais na nossa organização. Infelizmente, nenhuma transmissão ou sistema de armazenamento de dados tem a garantia de serem 100% seguros. Caso tenha motivos para acreditar que sua interação conosco tenha deixado de ser segura, favor nos notificar imediatamente.</p>
+    </div>
+
+    <div class="pp-section">
+      <h2>Links de hipertexto para outros sites</h2>
+      <p>Este Site poderá, de tempos a tempos, conter links de hipertexto que redirecionará você para sites de parceiros, anunciantes e fornecedores. Cada site possui suas próprias práticas de privacidade e não somos responsáveis por essas políticas. Consulte as referidas políticas antes de enviar quaisquer Dados Pessoais a esses sites.</p>
+    </div>
+
+    <div class="pp-section">
+      <h2>Atualizações desta Política de Privacidade</h2>
+      <p>Se modificarmos nossa Política de Privacidade, publicaremos o novo texto no Site, com a data de revisão atualizada. Podemos alterar esta Política de Privacidade a qualquer momento. Sua utilização do Site após as alterações significa que aceitou as Políticas de Privacidade revisadas.</p>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="pp-contact">
+      <p>Dúvidas sobre o tratamento dos seus dados? Entre em contato conosco.</p>
+      <a href="mailto:contato@wtechgoiania.com.br">contato@wtechgoiania.com.br</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <div class="pp-footer__inner">
+      <img src="assets/logo-white.png" alt="W Tech Informática" class="pp-footer__logo" />
+      <p class="pp-footer__about">
+        Assistência técnica de notebooks, desktops e MacBooks em Goiânia.
+        Atendimento na loja, a domicílio e em empresas.
+      </p>
+      <div class="pp-footer__social">
+        <a href="https://instagram.com/wtech_informatica" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://facebook.com/wtechinformatica01" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/5562993291737?text=Ol%C3%A1%2C%20WTech!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.853L.057 23.5l5.818-1.525A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.5-5.207-1.378l-.371-.22-3.853 1.01 1.027-3.752-.241-.386A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="pp-footer__bottom">
+      <span>© 2026 W Tech Informática · Goiânia · GO</span>
+      <a href="/politica-de-privacidade.html">Política de privacidade</a>
+    </div>
+    <div class="pp-footer__agency">
+      <a href="https://www.jpmidiadigitaleimpressa.com.br/" target="_blank" rel="noopener noreferrer">Site desenvolvido por JP Marketing Digital</a>
+    </div>
+  </footer>
+
+</body>
+</html>
